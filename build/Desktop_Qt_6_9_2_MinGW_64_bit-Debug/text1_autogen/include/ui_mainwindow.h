@@ -36,10 +36,10 @@ public:
     QAction *chapter_3;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
-    QTextEdit *textEdit;
     QPushButton *nextButton;
     QPushButton *lastButton;
     QPushButton *backButton;
+    QTextEdit *textEdit;
     QPushButton *changeDNButton;
     QMenuBar *menubar;
     QMenu *menu1;
@@ -72,16 +72,6 @@ public:
         centralwidget->setObjectName("centralwidget");
         gridLayout = new QGridLayout(centralwidget);
         gridLayout->setObjectName("gridLayout");
-        textEdit = new QTextEdit(centralwidget);
-        textEdit->setObjectName("textEdit");
-        QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Expanding);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(textEdit->sizePolicy().hasHeightForWidth());
-        textEdit->setSizePolicy(sizePolicy);
-
-        gridLayout->addWidget(textEdit, 1, 0, 1, 3);
-
         nextButton = new QPushButton(centralwidget);
         nextButton->setObjectName("nextButton");
 
@@ -96,6 +86,16 @@ public:
         backButton->setObjectName("backButton");
 
         gridLayout->addWidget(backButton, 5, 1, 1, 1);
+
+        textEdit = new QTextEdit(centralwidget);
+        textEdit->setObjectName("textEdit");
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(textEdit->sizePolicy().hasHeightForWidth());
+        textEdit->setSizePolicy(sizePolicy);
+
+        gridLayout->addWidget(textEdit, 1, 0, 1, 3);
 
         changeDNButton = new QPushButton(centralwidget);
         changeDNButton->setObjectName("changeDNButton");
@@ -123,6 +123,7 @@ public:
         menu1->addAction(chapter_1);
         menu1->addAction(chapter_2);
         menu1->addAction(chapter_3);
+        menu1->addSeparator();
         menu_2->addAction(song);
         menu_2->addAction(weiruan);
         menu_3->addAction(size_9);
@@ -145,6 +146,9 @@ public:
         size_12->setText(QCoreApplication::translate("MainWindow", "12", nullptr));
         size_15->setText(QCoreApplication::translate("MainWindow", "15", nullptr));
         chapter_3->setText(QCoreApplication::translate("MainWindow", "\347\254\254\344\270\211\347\253\240", nullptr));
+        nextButton->setText(QCoreApplication::translate("MainWindow", "\344\270\213\344\270\200\347\253\240", nullptr));
+        lastButton->setText(QCoreApplication::translate("MainWindow", "\345\211\215\344\270\200\347\253\240", nullptr));
+        backButton->setText(QCoreApplication::translate("MainWindow", "\350\277\224\345\233\236", nullptr));
         textEdit->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -153,9 +157,6 @@ public:
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Microsoft YaHei UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
-        nextButton->setText(QCoreApplication::translate("MainWindow", "\344\270\213\344\270\200\347\253\240", nullptr));
-        lastButton->setText(QCoreApplication::translate("MainWindow", "\345\211\215\344\270\200\347\253\240", nullptr));
-        backButton->setText(QCoreApplication::translate("MainWindow", "\350\277\224\345\233\236", nullptr));
         changeDNButton->setText(QCoreApplication::translate("MainWindow", "\345\244\234\351\227\264\346\250\241\345\274\217", nullptr));
         menu1->setTitle(QCoreApplication::translate("MainWindow", "\351\200\211\346\213\251\347\253\240\350\212\202", nullptr));
         menu_2->setTitle(QCoreApplication::translate("MainWindow", "\351\200\211\346\213\251\345\255\227\344\275\223", nullptr));
