@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>select_layout</class>
+ <widget class="QWidget" name="select_layout">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>535</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="4">
+    <widget class="QPushButton" name="selectButton">
+     <property name="text">
+      <string>选择章节</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="5">
+    <widget class="QTextEdit" name="textEdit"/>
+   </item>
+   <item row="0" column="2">
+    <widget class="QPushButton" name="fontButton">
+     <property name="text">
+      <string>字体</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QPushButton" name="lastButton">
+     <property name="text">
+      <string>上一章</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QPushButton" name="nightButton">
+     <property name="text">
+      <string>夜间模式</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="sizeButton">
+     <property name="text">
+      <string>字体大小</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QPushButton" name="backButton">
+     <property name="text">
+      <string>返回</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QPushButton" name="nextButton">
+     <property name="text">
+      <string>下一章</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <zorder>selectButton</zorder>
+  <zorder>textEdit</zorder>
+  <zorder>lastButton</zorder>
+  <zorder>backButton</zorder>
+  <zorder>sizeButton</zorder>
+  <zorder>nightButton</zorder>
+  <zorder>fontButton</zorder>
+  <zorder>nextButton</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
